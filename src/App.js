@@ -1,46 +1,25 @@
-import'./style/Card.css'
-import Card from './components/Card.js'
-import Nav from './components/Nav.js'
+import logo from './logo.svg';
+import './App.css';
 
-const App = ()=>{
- const gatos= [{
-   nombre:'tomas',
-   precio:15000,
-   descripcion:"tomas esta feliz de ser vendido"
-   
- },
- {
-  nombre:'pepe',
-  precio:15000,
-  descripcion:"pepe tambien esta feliz de ser vendido"
- 
-},
-{
-  nombre:'pepito',
-  precio:1500,
-  descripcion:"pepito no esta tan feliz de ser vendido"
-  
-}]
-   
-return(
-  
-
-  
-   <div className="divContenedor">
-    {gatos.map(elemento=>(
-      <div className="container">
-        <Card
-          nombre={elemento.nombre}
-          precio={elemento.precio}
-          descripcion={elemento.descripcion}
-        />
-      </div>
-    ))}
-   </div>
-  )
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
 }
-export default App
 
-
-
-
+export default App;
