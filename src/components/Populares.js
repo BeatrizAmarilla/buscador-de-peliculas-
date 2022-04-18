@@ -1,4 +1,4 @@
-import useFetchPelis from "../hook/useFetchPelis"
+import useFetchPelis from "../Hooks/useFetchPelis"
 
 const Populares = () =>{
  const{peliculas, isLoanding} = useFetchPelis("popular")

@@ -1,4 +1,4 @@
-import Carrusel from "./Carrousel"
+import Carrusel from "./Carrusel"
 import Main from "./Main"
 
 

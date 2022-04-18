@@ -1,4 +1,4 @@
-import useFetchPelis from "../hook/useFetchPelis"
+import useFetchPelis from "../Hooks/useFetchPelis"
 
 const Ultimas = () =>{
     const {peliculas,isLoanding} = useFetchPelis("upcoming")

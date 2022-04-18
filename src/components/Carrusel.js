@@ -1,7 +1,7 @@
 import { Row, Col } from "./AuxiliaresCarrousel";
 
 import RBCarousel from "react-bootstrap-carousel";
-import useFetchCarrusel from "../hook/useFetchCarrusel";
+import useFetchCarrusel from "../Hooks/useFetchCarrusel";
 import { Link } from "react-router-dom";
 
 
