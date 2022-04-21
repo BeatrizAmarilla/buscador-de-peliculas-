@@ -1,7 +1,57 @@
-export const BaseUrl = 'https://api.themoviedb.org/3/';
-export const ApiKey ='?api_key=36eef0f3ec35bf9f2c93121f86888240';
-export const ImgW300 = 'https://image.tmdb.org/t/p/w300';
-export const ImgW500= 'https://image.tmdb.org/t/p/w500';
-export const ImgOriginal ='https://image.tmdb.org/t/p/original';
-export const VideoAdelanto='https://www.youtube.com/embed/'
-export const Languages ='&language=';
+import { ApiKey,BaseUrl, } from "../exportarArchivos/Export"
+import { useEffect,useState } from "react"
+import Card from "./Card"
+import "../style/CardStilo.scss"
+const Buscar = () =>{
+    const [valorDelInput, setValorDelInput] =useState("")
+    const [endpoint, setEndpoint] =useState("")
+    const [peliculas,setPeliculas]=useState([])
+    useEffect(() => {
+        fetch(`${BaseUrl}search/movie${ApiKey}&query=${endpoint}`)
+            .then(res => res.json())
+            .then(data => {setPeliculas(data.results)
+               
+            }).catch(error=>{
+                console.log(error)
+            })
+    }, [endpoint])
+    const handleChangeInput =(e)=>{
+        setValorDelInput(e.target.value)
+    }
+    const handleSubmit=(e)=>{
+        e.preventDefault()
+        setEndpoint(valorDelInput)
+    }
+
+
+    return (
+        <div>
+            <h1>Busqueda</h1>
+            <div className="cardsConteiner cards">
+                <form onSubmit={handleSubmit}>
+                    
+                    <label for="Busqueda">Busqueda</label>
+                    <input type="text" id="Busqueda" name="Busqueda" value={valorDelInput} onChange={handleChangeInput}/>
+                      
+                </form>
+                {peliculas && peliculas.map(element=>{
+                    return(
+                        
+                        <Card key={element.id}
+                        nombre ={element.title} 
+                            imagen={element.poster_path}
+                            
+                        />
+                        
+                    )
+                })}
+                   
+            </div>
+        </div>
+    )
+    
+}
+
+
+export default Buscar
+
