@@ -5,7 +5,7 @@ import Ultimas from './components/Ultimas';
 import Populares from './components/Populares';
 import Buscar from './components/Buscar';
 import NavPeliculas from './components/NavPeliculas';
-
+import PeliDetalles from './components/PeliDetalles';
 import Footer from "./components/Footer";
 
 const App = ()=>{
@@ -19,6 +19,7 @@ const App = ()=>{
             <Route path='/ultimas' element={<Ultimas/>}/>
             <Route path='/populares' element={<Populares/>}/>
             <Route path='/buscar' element={<Buscar/>}/>
+            <Route path='/movie/:id' element={<PeliDetalles/>}/>
         </Routes>
       </BrowserRouter>
       <Footer/>

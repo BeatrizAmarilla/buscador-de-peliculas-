@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const useFetch = () => {
+const useFetchCarrusel = () => {
 
     const [elemento, setElemento] = useState([])
 
@@ -18,4 +18,4 @@ const useFetch = () => {
     return elemento
 }
 
-export default useFetch;
+export default useFetchCarrusel;
