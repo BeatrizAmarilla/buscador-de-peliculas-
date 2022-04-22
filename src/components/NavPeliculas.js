@@ -23,7 +23,7 @@ const NavPeliculas = () => {
                     <Nav.Link as={Link} to="/ultimas">Ultimos Lanzamiento</Nav.Link>
                     <Nav.Link as={Link} to="/populares">Populares</Nav.Link>
                     <Nav.Link as={Link} to="/buscar" >Buscar</Nav.Link>
-                   
+                    <Nav.Link as={Link} to="/buscar" >Buscar</Nav.Link>
                 </Nav>
                 </Navbar.Collapse>
             </Container>
