@@ -12,8 +12,8 @@ const PeliDetalles = () =>{
             .then(data => {
                 setElement(data)})
 
-    }, [])
-    console.log(element)
+    }, [parametros.id])
+ 
 
 
 
