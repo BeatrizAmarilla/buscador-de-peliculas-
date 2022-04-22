@@ -1,11 +1,11 @@
 import {Navbar,Nav,Container} from "react-bootstrap"
 import { Outlet,Link } from "react-router-dom"
-
+import "../style/NavPeliStilo.scss"
 
 const NavPeliculas = () => {
     return(
         <>
-        <Navbar bg="dark" variant="pills" expand="lg">
+        <Navbar bg="dark NavPeliStilo" variant="pills" expand="lg">
             <Container>
                 <Navbar.Brand as={Link} to="/">
                     <img
