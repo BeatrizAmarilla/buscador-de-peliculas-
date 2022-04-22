@@ -1,0 +1,26 @@
+.conteinerCardDetalles{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    
+    background-color: aqua;
+    
+    
+}
+
+.contenedorImagen{
+
+    justify-content: left;
+    background-color: blueviolet;
+}
+
+.conteinerTitulo{
+   justify-content: right;
+   background-color: chartreuse;
+       
+
+
+}
+
+
+
