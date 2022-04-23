@@ -1,3 +1,4 @@
+
 import { useEffect,useState } from "react"
 import { ApiKey,BaseUrl, } from "../exportarArchivos/Export"
 import Card from "./Card"
@@ -23,6 +24,7 @@ const Busqueda = ()=>{
         setEndpoint(valorDelInput)
     }
 
+
     return(
         <div className="backPage">
             <h2 style= {{color:"white",fontWeight:"bold",margin:"0"}}>Busqueda</h2>
@@ -47,3 +49,5 @@ const Busqueda = ()=>{
 export default Busqueda;
 
 
+
+   

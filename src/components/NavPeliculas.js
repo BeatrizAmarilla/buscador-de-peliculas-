@@ -27,7 +27,6 @@ const NavPeliculas = () => {
                 "20px",fontWeight:"bold"}} as={Link} to="/populares">Populares</Nav.Link>
                     <Nav.Link style= {{textDecoration:"none",color:"white",marginLeft:
                 "20px",fontWeight:"bold"}} as={Link} to="/buscar" >Buscar</Nav.Link>
-                   
                 </Nav>
                 </Navbar.Collapse>
             </Container>

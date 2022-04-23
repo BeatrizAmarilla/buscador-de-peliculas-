@@ -1,5 +1,6 @@
 import useFetchPelis from "../Hooks/useFetchPelis"
 import Card from "./Card"
+
 import "../style/CardsConteiner.scss"
 
 
@@ -24,12 +25,12 @@ const Ultimas = () =>{
                 
                 ))}
             </div>
-              
+
         </div>
     )
 }
 
-export default Ultimas
 
+export default Ultimas
 
 

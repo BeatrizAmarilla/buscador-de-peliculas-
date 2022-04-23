@@ -1,7 +1,9 @@
 import useFetchPelis from "../Hooks/useFetchPelis"
 import Card from "./Card"
+
 import "../style/CardsConteiner.scss"
 import "../style/backPage.scss"
+
 
 
 
@@ -9,6 +11,7 @@ const Populares = () =>{
  const{peliculas, isLoanding} = useFetchPelis("popular")
   
     return (
+
         <div className="backPage">
             <h2 style= {{color:"white",fontWeight:"bold",margin:"0",padding:"10px 10px 10px 10px"}}>PELICULAS POPULARES</h2>
         
@@ -33,5 +36,6 @@ const Populares = () =>{
 }
 
 export default Populares
+
 
 
