@@ -1,12 +1,15 @@
 import useFetchPelis from "../Hooks/useFetchPelis"
 import Card from "./Card"
-import PeliDetalles from "./PeliDetalles"
+import "../style/CardsConteiner.scss"
+
+
+
 const Ultimas = () =>{
     const {peliculas} = useFetchPelis("upcoming")
 
     return (
-        <div>
-        <h2>ultimas pelis</h2>
+        <div className="backPage">
+            <h2 style= {{color:"white",fontWeight:"bold",margin:"0",padding:"10px 10px 10px 10px"}}>ULTIMAS PELICULAS</h2>
 
             <div className="cardsConteiner cards" >
                 {peliculas.map(element => (

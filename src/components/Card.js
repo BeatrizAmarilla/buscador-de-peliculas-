@@ -1,19 +1,17 @@
 import { ImgW300 } from "../exportarArchivos/Export"
 import { Link } from "react-router-dom"
 
-
-
 const Card = ({nombre, imagen, detalle, votacion,id})=>{
     return(
-        <Link to={`/movie/${id}`} >
+        <Link to={`/movie/${id}`} style= {{textDecoration:"none",color:"white",marginLeft:
+        "20px",fontWeight:"bold"}}>
             <div>
-                <img alt="imagen" src={ImgW300+imagen} />
+                <img style={{borderRadius: "10px"}} alt="imagen" src={ImgW300+imagen} />
             </div>
 
             <div>
                 <h1>{nombre}</h1>
                 <p>{votacion}</p>
-            
             </div>
         </Link>
     )

@@ -1,22 +1,21 @@
 import { ImgW300 } from "../exportarArchivos/Export"
-import { Link } from "react-router-dom"
+
 import "../style/CardDetallesPeli.scss"
 
 
-const CardDetalles = ({nombre, imagen,votacion,id})=>{
+const CardDetalles = ({nombre, imagen,votacion,imagenDeFondo,genres})=>{
     return(
-        <div className="conteinerCardDetalles">
-            <Link to={`/movie/${id}`} >
+        <div className="conteinerCardDetalles" style={{backgroundImage:`url(https://image.tmdb.org/t/p/original${imagenDeFondo})`}}     >
+            
                 <div className="contenedorImagen">
                     <img alt="imagen" src={ImgW300+imagen} />
                 </div>
 
                 <div className="conteinerTitulo">
-                    <h1>{nombre}</h1>
+                    <h2>{nombre}</h2>
                     <p>{votacion}</p>
                 
                 </div>
-            </Link>
         </div>
 
     )

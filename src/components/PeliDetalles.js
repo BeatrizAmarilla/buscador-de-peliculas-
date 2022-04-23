@@ -14,10 +14,6 @@ const PeliDetalles = () =>{
                 setElement(data)})
 
     }, [])
- 
-
-
-
 
     return(
         <CardDetalles
@@ -26,7 +22,7 @@ const PeliDetalles = () =>{
                 imagen={element.poster_path}
                 votacion={element.vote_average}
                 id={element.id}
-                
+                imagenDeFondo = {element.backdrop_path}
                 />
 
 

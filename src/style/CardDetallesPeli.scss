@@ -1,26 +1,17 @@
 .conteinerCardDetalles{
     display: flex;
     width: 100%;
-    flex-direction: row;
+    height: 100vh;   
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
     
-    background-color: aqua;
     
-    
-}
-
-.contenedorImagen{
-
-    justify-content: left;
-    background-color: blueviolet;
 }
 
 .conteinerTitulo{
-   justify-content: right;
-   background-color: chartreuse;
-       
-
-
+    color: azure;
 }
-
 
 

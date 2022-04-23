@@ -1,35 +1,39 @@
-import useFetchPelis from "../Hooks/useFetchPelis"
-import Card from "./Card"
+import Carrusel from "./Carrusel"
+import ListMovies from "./ListMovies";
+import { Paper } from "@mui/material";
+import "../style/TopRatedStilo.scss"
+import { Link } from "react-router-dom";
 
-const Main = () =>{
-    
- const {peliculas,isLoanding} = useFetchPelis("popular")
-  
-    
+
+const Main = () => {
+
     return (
-        <div>
-            <h2>peliculas popu</h2>
-            {isLoanding && <p>ESTA CARGANDO</p>}
-            <div>
-                {peliculas.map(element => (
-                <div>
-                    <Card 
-                        key={element.id}
-                        nombre ={element.title} 
-                    imagen={element.poster_path}
-                    votacion={element.vote_average}
-                    id={element.id}
-                    />
-                </div>
-                ))}
+        
+
+        <div className="TopRatedStilo">
+            
+            <div >
+                <Carrusel />
             </div>
+           
+            <div  >
+                
+                <Paper elevation={3} className="paper" sx={{ maxHeight: 500, overflow: 'auto', margin: 10, borderRadius: 5 }}>
+                    <h2>Popular Movies</h2>
+                    <Link to="/movie/:id">
+                    <ListMovies title="Popular Movies" url="popular" />
+                    </Link>
+                </Paper>
+               
+                <Paper elevation={3} className="paper" sx={{ maxHeight: 500, overflow: 'auto', margin: 10, borderRadius: 5 }}>
+                    <h2>Top Rated</h2>
+                    <ListMovies title="Top Rated" url="top_rated" />
+                </Paper>
+
+            </div>
+
         </div>
-
-
-
-
 
     )
 }
-
 export default Main
