@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom"
 import { useState,useEffect } from "react"
 
+import CardDetalles from "./CardDetalles"
 
 const PeliDetalles = () =>{
     const parametros = useParams()
@@ -13,13 +14,16 @@ const PeliDetalles = () =>{
                 setElement(data)})
 
     }, [])
-    console.log(element)
-
-
-
 
     return(
-        <h2>{element.title}</h2>
+        <CardDetalles
+                key={element.id}                
+                nombre ={element.title} 
+                imagen={element.poster_path}
+                votacion={element.vote_average}
+                id={element.id}
+                imagenDeFondo = {element.backdrop_path}
+                />
 
 
     )
