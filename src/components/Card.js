@@ -10,7 +10,7 @@ const Card = ({nombre, imagen, detalle, votacion,id})=>{
             </div>
 
             <div>
-                <h1>{nombre}</h1>
+                <h2>{nombre}</h2>
                 <p>{votacion}</p>
             </div>
         </Link>
